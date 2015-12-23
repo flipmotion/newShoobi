@@ -1,8 +1,27 @@
 .content {
+
 	&.block-1 {
 		background: url(../img/block-bg-1.jpg) center center no-repeat;
 		background-size: cover;
-		padding: 90px 0 0px;
+		padding: 110px 0 0px;
+		position: relative;
+		.inner {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			background: rgba(0,0,0,.8);
+			bottom: 0;
+			letter-spacing: 7px;
+			p {
+				line-height: 42px;
+				margin-bottom: 0;
+				color: #f8c734;
+				font-size: 36px;
+				text-align: center;
+				.mgr;
+				font-weight: 700;
+			}
+		}
 		.timer {
 			&>div {
 				display: inline-block;
@@ -65,6 +84,7 @@
 			transform: skewX(-35deg);
  			background: #f8c734;
  			padding: 5+5px 70px 7+5px;
+
  			display: table;
  			margin:10px auto 50px;
  			border-radius: 3px;
@@ -84,22 +104,70 @@
 		}
 	}
 	&.block-3 {
-		background: url(../img/block-bg-3.jpg) center center no-repeat;
-		background-size: cover;
+		background-image: url(../img/block-7-bg.jpg);
+		background-repeat: no-repeat;
 		padding: 10px 0 50px;
+		.or {
+			margin-top:-10px;
+			margin-bottom:-10px;
+			font-size: 17px;
+		}
 		img.full-width {
-			margin-top: -66px;
+			margin-top: -113px;
 			&.right {
-				    margin-top: -90px;
+				margin-top: -138px;
 			}
 		}
+		.form-title,
+		.or,
+		.subtitle,
+		button,
+		h2,
+		img {
+			position: relative;
+			z-index: 1;
+		}
 		h2 {
-			.mgblack;
+			.mgbold;
 			font-size: 44px;
 			color: #000;
-			margin-bottom: 20px;
-			margin-top: 30px;
+			margin-bottom: 50px;
+			margin-top: -30px;
+			display: inline-table;
+			transform: skewX(-25deg);
+			border-radius: 3px;
+			background: #f8c734;
+			padding: 15px 70px 20px;
+			span {
+ 				transform: skewX(25deg);
+ 				display: block;
+ 			}
 		}
+		form {
+			position: relative;
+			&:after {
+				content: '';
+				width: 727px;
+				height: 451px;
+				background: url(../img/form-bg.png) center center no-repeat;
+				position: absolute;
+				left: 50%;
+				margin-left: -727/2px;
+				top: -200px;
+			}
+		}
+		/*h3 {
+			transform: skewX(-35deg);
+ 			background: #f8c734;
+ 			padding: 5+5px 70px 7+5px;
+ 			display: table;
+ 			margin:10px auto 50px;
+ 			border-radius: 3px;
+ 			span {
+ 				transform: skewX(35deg);
+ 				display: block;
+ 			}	
+		}*/
 		.subtitle {
 			font-size: 18px;
 			color: #000;
@@ -108,12 +176,13 @@
 				.mgbold;
 			}
 		}
+
 		.form-title {
 			font-size: 24px;
 			.mgbold;
 			text-transform: uppercase;
-			//margin-bottom: 25px;
-			//margin-top: 25px;
+			margin-bottom: 25px;
+			margin-top: 25px;
 			span {
 				text-transform: lowercase;
 				.mgr;
@@ -122,25 +191,16 @@
 		}
 		.polit {
 			font-size: 16px;
-			.mgr;
+			.op;
 			text-decoration: underline;
 			padding: 3px 0px 3px 30px;
 			background: url(../img/polit.png) center left no-repeat;
-			color: #1b4274;
+			color: #25365f;
 			display: table;
 			.center-block;
-			margin-top: 15px;
 			&:hover,&:focus {
 				text-decoration: none;
 			}
-		}
-		.sep {
-			text-align: center;
-			margin-bottom: -10px;
-			line-height: 1;
-			margin-top: -10px;
-			font-size: 16px;
-			color: #333;
 		}
 	}
 	&.block-4 {
@@ -157,7 +217,7 @@
 		background: linear-gradient(to bottom,  #f1f6ff 0%,#ffffff 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f6ff', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
 
-		h2 {
+		/*h2 {
 			font-size: 48px;
 			margin: 8px 0 0 0;
 			.mgblack;
@@ -166,6 +226,25 @@
 			font-size: 23px;
 			margin: 35px 0 0 0;
 			.mgblack;
+		}*/
+		h3 {
+			font-size: 24px;
+			.mgbold;
+			margin: -25px 0 40px;
+		}
+		h2 {
+			.mgbold;
+			font-size: 44px;
+			color: #000;
+			margin: 45px 0 35px;
+			display: block;
+			transform: skewX(-25deg);
+			background: #f8c734;
+			padding: 0 180px 3px;
+			span {
+ 				transform: skewX(25deg);
+ 				display: block;
+ 			}
 		}
 		.br {
 			height: 3px;
@@ -199,13 +278,46 @@
 			margin-bottom: 20px;
 			display: block;
 			overflow: hidden;
+			cursor: pointer;
+			&:hover .test {
+				opacity: 1;
+				-moz-transition: all 0.5s;
+				-o-transition: all 0.5s;
+				-webkit-transition: all 0.5s;
+
+			}
+			&:hover {
+				.bottom {
+					bottom:-200px;
+				}
+			}
+			&:hover img {
+				-webkit-transform: scale(1.1);
+					-moz-transform: scale(1.1);
+					-o-transform: scale(1.1);
+			}
+			.test {
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				z-index: 10;
+				background-color: rgba(0, 0, 0, 0.5 );
+				position: absolute;
+			}
+			img {
+				-moz-transition: all 0.5s ease-out;
+				-o-transition: all 0.5s ease-out;
+				-webkit-transition: all 0.5s ease-out;
+			}
 		}
+
 		.bottom {
 			position: absolute;
 			bottom: 0px;
 			left: 0;
 			width: 100%;
 			padding: 10px 10px;
+			transition:@transition;
 		}
 		.price {
 			display: flex;
@@ -223,13 +335,13 @@
 					font-weight: 700;
 					line-height: 25px;
 				}
-				&:last-child {
-					.op;
-					font-size: 13px;
-					font-weight: 400;
-					line-height: 25px;
-					text-decoration: line-through;
-				}
+				// &:last-child {
+				// 	.op;
+				// 	font-size: 13px;
+				// 	font-weight: 400;
+				// 	line-height: 25px;
+				// 	text-decoration: line-through;
+				// }
 			}
 		}
 		.bage {
@@ -238,7 +350,96 @@
 		}
 	}
 	&.block-5 {
-		background: url(../img/block-bg-3.jpg) center center no-repeat;
+		background: url(../img/block-5-bg.jpg) center center no-repeat;
+		background-size: cover;
+		padding: 30px 0 0px;
+		
+		h2 {
+			.mgbold;
+			font-size: 44px;
+			color: #fecd3a;
+			margin-bottom: 30px;
+			margin-top: 30px;
+			line-height: 55px;
+		}
+		ul {
+			margin-bottom: 35px;
+			li {
+				color:#fcfdff;
+			}
+				font-size: 24px;
+				p {
+					margin-bottom: 0;
+				}
+			}
+		p {
+			.op;
+			font-size: 18px;
+			strong {
+				.mgbold;
+				font-size: 24px;
+				color:#fecd3a;
+			}
+			b {
+				.op;
+				font-size: 700;
+			}
+
+		}
+		.or {
+			margin-top: 85px;
+		}
+		.holder {
+			background: rgba(248,202,40,.67);
+			display: table;
+			margin: 0 auto;
+		}
+		.item {
+			img {
+				margin-bottom: 20px;
+			}
+			text-align: center;
+			display: table;
+			margin: 20px auto;
+			padding-left: 0px;
+			ul {
+				&.p {
+					padding-left: 60px;
+				}
+				padding-left: 15px;
+				text-align: left;
+			}
+		}
+	}
+	&.block-6 {
+		background-image: url(../img/block-6-bg.jpg);
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		.akcia {
+			margin: 50px 0 30px 0;
+		}
+		.item {
+			margin-bottom: 100px;
+			display: inline-block;
+			img {
+				margin: 0 0 25px 0;
+			}
+			p {
+				font-size: 24px;
+				.mgbold;
+				margin: 0 0 5px 0;
+			}
+			.price {
+				background-color: #f8c734;
+				display: inline-block;
+				padding: 0 10px;
+				span {
+					.mgbold;
+				}
+			}
+		}
+		/*background: url(../img/block-bg-3.jpg) center center no-repeat;
 		background-size: cover;
 		padding: 30px 0 0px;
 		
@@ -291,24 +492,73 @@
 				padding-left: 15px;
 				text-align: left;
 			}
-		}
+		}*/
 	}
-	&.block-6 {
-		background: #fff;
+	&.block-7 {
+		background-image: url(../img/block-7-bg.jpg);
+		background-repeat: no-repeat;
 		padding: 10px 0 50px;
+		.or {
+			margin-top:-10px;
+			margin-bottom:-10px;
+			font-size: 17px;
+		}
 		img.full-width {
-			margin-top: -66px;
+			margin-top: -113px;
 			&.right {
-				    margin-top: -90px;
+				margin-top: -138px;
 			}
 		}
+		.form-title,
+		.or,
+		.subtitle,
+		button,
+		h2,
+		img {
+			position: relative;
+			z-index: 1;
+		}
 		h2 {
-			.mgblack;
+			.mgbold;
 			font-size: 44px;
 			color: #000;
-			margin-bottom: 20px;
-			margin-top: 30px;
+			margin-bottom: 50px;
+			margin-top: -30px;
+			display: inline-table;
+			transform: skewX(-25deg);
+			border-radius: 3px;
+			background: #f8c734;
+			padding: 15px 70px 20px;
+			span {
+ 				transform: skewX(25deg);
+ 				display: block;
+ 			}
 		}
+		form {
+			position: relative;
+			&:after {
+				content: '';
+				width: 727px;
+				height: 451px;
+				background: url(../img/form-bg.png) center center no-repeat;
+				position: absolute;
+				left: 50%;
+				margin-left: -727/2px;
+				top: -200px;
+			}
+		}
+		/*h3 {
+			transform: skewX(-35deg);
+ 			background: #f8c734;
+ 			padding: 5+5px 70px 7+5px;
+ 			display: table;
+ 			margin:10px auto 50px;
+ 			border-radius: 3px;
+ 			span {
+ 				transform: skewX(35deg);
+ 				display: block;
+ 			}	
+		}*/
 		.subtitle {
 			font-size: 18px;
 			color: #000;
@@ -317,6 +567,7 @@
 				.mgbold;
 			}
 		}
+
 		.form-title {
 			font-size: 24px;
 			.mgbold;
@@ -331,17 +582,18 @@
 		}
 		.polit {
 			font-size: 16px;
-			.mgr;
+			.op;
 			text-decoration: underline;
 			padding: 3px 0px 3px 30px;
 			background: url(../img/polit.png) center left no-repeat;
-			color: #452f04;
+			color: #25365f;
+			display: table;
+			.center-block;
 			&:hover,&:focus {
 				text-decoration: none;
 			}
 		}
 	}
-	
 }
 .modal {
 	.close {

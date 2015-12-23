@@ -1,8 +1,24 @@
 .header {
-	background: rgba(248,202,40,.67);
-	padding: 10px 0;
+	//background: rgba(248,202,40,.67);
+	padding: 0px 0;
+	margin:10px 0;
+	transition: @transition;
+	&.fix-header {
+		margin-top:0;
+		background: #fff;
+	}
+	.header-bg {
+		background: #fff;
+		padding: 5px;
+		border-radius: 3px;
+		transition: @transition;
+	}
 	.logo {
-		margin-top: 5px;
+		background: #f9d001;
+		display: table;
+		padding: 15px;
+		border-radius: 3px;
+		transition: @transition;
 	}
 	.navbar {
 		margin-bottom: 0;
@@ -11,25 +27,31 @@
 		border-radius: 0;
 	}
 	.navbar-nav {
+		transition: @transition;
 		display: flex;
 		justify-content: space-between;
 		float: none;
-		margin: 13px 0 0 0;
+		margin: 10px 0 0 0;
 	}
 	.navbar-default .navbar-nav>li{
 		&>a {
-			padding: 0;
+			padding: 15px 15px;
+			border-radius: 3px;
 			font-size: 18px;
+			transition: @transition;
 			.mgbold;
 			color: #000;
 			&:hover,&:focus {
 				background: 0 0;
 				color: #000;
 			}
+			&:hover {
+				background: #d5d5d5;
+			}
 		}
 		&.active {
 			a {
-				background: 0 0;
+				background: #ffd60c;
 			}
 			&:hover,&:focus {
 				background: 0 0;
@@ -38,7 +60,9 @@
 		}
 	}
 	.phone {
+		transition: @transition;
 		font-size: 17px;
+		margin-top: 11px;
 		.mgbold;
 		margin-bottom: 0;
 	}

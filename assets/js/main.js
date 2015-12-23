@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$(".fancybox").fancybox();
 	$('[data-item="phone"]').mask("9 (999) 999-99-99");
 	$("body").scrollspy({target: "#menu", offset:80});
 	$('a.smooth').click(function(){
@@ -35,13 +36,13 @@ $(document).ready(function() {
 
 	function init2 () {
 		myMap2 = new ymaps.Map('map', {
-			center: [56.854310, 60.605048],
+			center: [58.007742, 56.242819],
 			zoom: 16,
 			controls: []
 		}),
 		myMap2.behaviors
 			.disable(['rightMouseButtonMagnifier' , 'scrollZoom'])
-			myPlacemark = new ymaps.Placemark([56.854310, 60.605048], {
+			myPlacemark = new ymaps.Placemark([58.007742, 56.242819], {
 				hintContent: [
 				''
 			].join('')
